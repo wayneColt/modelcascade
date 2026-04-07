@@ -274,14 +274,16 @@ body::after{content:'';position:fixed;inset:0;z-index:100;pointer-events:none;ba
 <section class="pricing" id="pricing">
   <div class="sec-label"><span class="sec-n">05</span> Pricing</div>
   <div class="pricing-header">
-    <div class="pricing-hook">You're already <em>paying for this.</em></div>
-    <div class="pricing-sub">Every request you send at flat rate costs <s>$0.005–$0.05</s> — but 74% of them only need a $0 local model. That's <strong style="color:var(--optic)">$185/month</strong> in routing waste at 10K requests/day. ModelCascade eliminates it.</div>
+    <div class="pricing-hook">Every unrouted API call is <em>money you already lost.</em></div>
+    <div class="pricing-sub">74% of requests can route locally at $0. The rest cascade to the cheapest model that meets your quality bar.</div>
+    <div class="pricing-anchor" style="margin-top:20px;font-size:12px;letter-spacing:.04em">Average team API spend: <span style="text-decoration:line-through;color:var(--chrome);opacity:.5">$200/mo</span> &nbsp;→&nbsp; With ModelCascade: <strong style="color:var(--optic)">from $0</strong></div>
   </div>
   <div class="pricing-grid">
     <div class="price-card">
       <div class="price-tier">Open Source</div>
+      <div class="price-savings" style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--optic);margin-bottom:4px">Save ~$148<span style="font-size:11px;font-weight:400;color:var(--chrome)">/mo</span></div>
       <div class="price-amount">$0</div>
-      <div class="price-desc">Self-host forever. MIT license. No limits. No telemetry.</div>
+      <div class="price-desc">Full routing engine. No artificial limits. MIT forever.</div>
       <ul class="price-features">
         <li>Unlimited requests</li>
         <li>Full cascade routing engine</li>
@@ -290,13 +292,15 @@ body::after{content:'';position:fixed;inset:0;z-index:100;pointer-events:none;ba
         <li>CLI interface</li>
         <li>Community support (GitHub)</li>
       </ul>
-      <a class="price-cta" href="https://github.com/wayneColt/modelcascade">View on GitHub</a>
+      <a class="price-cta" href="https://github.com/wayneColt/modelcascade">pip install modelcascade</a>
     </div>
     <div class="price-card featured">
-      <div class="price-badge">Recommended</div>
+      <div class="price-badge">Most chosen by developers</div>
       <div class="price-tier featured-tier">Pro</div>
+      <div class="price-savings" style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--optic);margin-bottom:4px">Save ~$171<span style="font-size:11px;font-weight:400;color:var(--chrome)">/mo</span></div>
       <div class="price-amount" style="color:var(--optic)">$29<span class="unit">/mo</span></div>
-      <div class="price-desc">Managed routing. Web dashboard. Cost analytics. No DevOps.</div>
+      <div class="price-ratio" style="font-size:10px;color:var(--chrome);margin-bottom:12px;letter-spacing:.04em">$171 saved / $29 spent = 5.9x return</div>
+      <div class="price-desc">Managed routing + analytics. Overnight batch routes 95% locally.</div>
       <ul class="price-features">
         <li>50,000 managed requests/mo</li>
         <li>Web dashboard + cost tracking</li>
@@ -305,30 +309,32 @@ body::after{content:'';position:fixed;inset:0;z-index:100;pointer-events:none;ba
         <li>Email support (48h)</li>
         <li>Overage: $0.0003/request</li>
       </ul>
-      <a class="price-cta primary" href="https://wayneia.com/consult">Get Started</a>
+      <a class="price-cta primary" href="https://wayneia.com/consult">Start Routing</a>
     </div>
     <div class="price-card">
       <div class="price-tier">Scale</div>
+      <div class="price-savings" style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--optic);margin-bottom:4px">Save ~$450<span style="font-size:11px;font-weight:400;color:var(--chrome)">/mo</span></div>
       <div class="price-amount">$99<span class="unit">/mo</span></div>
-      <div class="price-desc">Teams. Alerts. A/B routing. Model benchmarking.</div>
+      <div class="price-ratio" style="font-size:10px;color:var(--chrome);margin-bottom:12px;letter-spacing:.04em">One workspace. Your whole team. No per-seat math.</div>
+      <div class="price-desc">Shared dashboard, cost tags, overnight batch optimization. Morning report your manager can forward to finance.</div>
       <ul class="price-features">
         <li>500,000 managed requests/mo</li>
-        <li>Team management + roles</li>
-        <li>Cost alerts + budget caps</li>
+        <li>Unlimited users per workspace</li>
+        <li>Per-project cost allocation tags</li>
         <li>A/B model testing</li>
         <li>Priority support (4h)</li>
         <li>Overage: $0.0002/request</li>
       </ul>
-      <a class="price-cta" href="https://wayneia.com/consult">Contact Sales</a>
+      <a class="price-cta" href="https://wayneia.com/consult">Start Routing</a>
     </div>
     <div class="price-card">
-      <div class="price-tier">Enterprise</div>
+      <div class="price-tier">Dedicated</div>
       <div class="price-amount" style="font-size:clamp(20px,3vw,28px)">Custom</div>
-      <div class="price-desc">SLA. On-prem. Dedicated support. Audit logging.</div>
+      <div class="price-desc">Your models, your infrastructure, our routing — deployed inside your VPC with an SLA attached.</div>
       <ul class="price-features">
         <li>Unlimited managed requests</li>
         <li>SSO + audit trail</li>
-        <li>On-premise deployment</li>
+        <li>On-premise / VPC deployment</li>
         <li>Custom model hosting</li>
         <li>Dedicated Slack + SLA</li>
         <li>Volume discounts</li>
@@ -336,7 +342,25 @@ body::after{content:'';position:fixed;inset:0;z-index:100;pointer-events:none;ba
       <a class="price-cta" href="https://wayneia.com/consult">Talk to Us</a>
     </div>
   </div>
-  <div class="pricing-footnote">Cancel anytime · Export your config · Self-host forever · Your keys never leave your machine<br>Open Source tier is permanent. Paid tiers add managed hosting and operational tooling — the MIT core never changes.</div>
+  <div class="pricing-faq" style="max-width:640px;margin:48px auto 0">
+    <details style="border-top:1px solid var(--line);padding:16px 0">
+      <summary style="cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--void)">What happens if I hit my request limit?</summary>
+      <p style="margin-top:12px;font-size:11px;color:var(--chrome);line-height:1.8">Nothing breaks. Your requests keep routing. We notify you at 80% and 100%. Overage is billed at the same per-request rate — no surprise multipliers. You can also set a hard cap: "never exceed $X/mo" and we stop routing to paid models when you hit it.</p>
+    </details>
+    <details style="border-top:1px solid var(--line);padding:16px 0">
+      <summary style="cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--void)">What happens to my requests at 3 AM?</summary>
+      <p style="margin-top:12px;font-size:11px;color:var(--chrome);line-height:1.8">They get cheaper. Overnight routing shifts batch requests to the lowest-cost models — typically 95% local routing vs 74% during peak hours. Your morning report shows exactly what ran, which models were used, and what it cost. You review, not relay.</p>
+    </details>
+    <details style="border-top:1px solid var(--line);padding:16px 0">
+      <summary style="cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--void)">Is this just another API proxy?</summary>
+      <p style="margin-top:12px;font-size:11px;color:var(--chrome);line-height:1.8">No. ModelCascade is open source (MIT). The routing engine runs in your environment. We never see your prompts and never proxy your API calls. Paid tiers add managed keys, analytics, and support — not routing capability. You can leave anytime and keep the same pip package running.</p>
+    </details>
+    <details style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0">
+      <summary style="cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--void)">My team is 3 people. Do I need the Scale tier?</summary>
+      <p style="margin-top:12px;font-size:11px;color:var(--chrome);line-height:1.8">Probably not yet. Start with Pro. When you want a shared dashboard or need cost-per-project tags for your manager's quarterly review, upgrade. Scale exists for organizational accountability, not technical capability.</p>
+    </details>
+  </div>
+  <div class="pricing-footnote" style="margin-top:28px">Cancel anytime · Export your config · Self-host forever · Your keys never leave your machine<br>Open Source tier is permanent. Paid tiers add operational tooling — the MIT core never changes.<br><span style="opacity:.6">Prices locked for 12 months from your start date.</span></div>
   <div class="pricing-formula">WTP = (Cost_Without − Cost_With) × Risk × Trust</div>
 </section>
 <div class="social-proof">Built from 10,000+ production dispatches across 24+ autonomous overnight sessions · Calibration data 2024–2026</div>
