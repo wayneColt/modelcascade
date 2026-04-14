@@ -1,0 +1,24 @@
+# ModelCascade example config
+# Route local first, escalate to cloud on failure
+
+providers:
+  local:
+    type: ollama
+    model: llama3.2:3b
+    cost_per_1k: 0.0
+  fast:
+    type: anthropic
+    api_key: ${ANTHROPIC_API_KEY}
+    model: claude-haiku-4-5-20251001
+    cost_per_1k: 0.001
+  capable:
+    type: anthropic
+    api_key: ${ANTHROPIC_API_KEY}
+    model: claude-sonnet-4-6
+    cost_per_1k: 0.005
+
+routing:
+  cost_ceiling: 0.01
+  cascade_on_failure: true
+  confidence_threshold: 0.7
+  max_retries: 1
